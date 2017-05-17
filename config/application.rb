@@ -19,6 +19,7 @@ Bundler.require(*Rails.groups)
 module Quickchativa
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.autoload_paths << Rails.root.join('lib')
     config.load_defaults 5.1
 
     # Settings in config/environments/* take precedence over those specified here.
@@ -29,7 +30,7 @@ module Quickchativa
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
 
-    config.autoload_paths << Rails.root.join('lib')
+
 
 
     config.api_only = true
