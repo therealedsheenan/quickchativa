@@ -33,6 +33,8 @@ To access User, Chat and Room models, the client MUST have the authenticated tok
     curl -H "Authorization: SAMPLE_TOKEN" http://localhost:3000/api/v1/rooms
     ```
 
+Without a validated TOKEN, you cannot access the anything on the server. 
+
 ## Authors
 
 * **Sheenan Tenepre** - [Github](https://github.com/therealedsheenan)
