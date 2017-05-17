@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       get 'users' => 'user#index'
       # chats
       resources :chats
+      # rooms
+      resources :rooms
     end
   end
 end
