@@ -1,4 +1,4 @@
-# Quickchativa
+# Quickchativa [![Build Status](https://travis-ci.org/therealedsheenan/quickchativa.svg?branch=master)](https://travis-ci.org/therealedsheenan/quickchativa)
 Rails API server for chat application.
 
 This is a Rails API server that uses JWT for authentication.
