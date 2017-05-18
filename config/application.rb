@@ -34,5 +34,12 @@ module Quickchativa
 
 
     config.api_only = true
+
+    # config.middleware.use Rack::Cors do
+    #   allow do
+    #     origins '*'
+    #     resource '/*', :headers => :any, :methods => :patch
+    #   end
+    # end
   end
 end
