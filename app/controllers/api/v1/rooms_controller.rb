@@ -3,14 +3,15 @@ class Api::V1::RoomsController < ApplicationController
 
   # GET /api/v1/rooms
   def index
-    @api_v1_rooms = Api::V1::Room.all
+    @api_v1_rooms = Room.all
 
     render json: @api_v1_rooms
   end
 
   # GET /api/v1/rooms/1
   def show
-    render json: @api_v1_room
+    @room_chats = @api_v1_room.chats
+    render json: @room_chats
   end
 
   # POST /api/v1/rooms
