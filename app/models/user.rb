@@ -1,6 +1,5 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :chats
-  has_many :rooms
-  has_many :room_user
+  has_many :conversations, :foreign_key => :sender_id
+
 end
