@@ -6,10 +6,14 @@ Rails.application.routes.draw do
     namespace :v1 do
       post 'authenticate', to: 'authentication#authenticate'
       get 'users' => 'user#index'
-      # chats
-      resources :chats
-      # rooms
-      resources :rooms
+      # # chats
+      # resources :chats
+      # # rooms
+      # resources :rooms
+
+      resources :conversations do
+        resources :messages
+      end
     end
   end
 end
