@@ -1,10 +1,10 @@
 class Api::V1::ChatsController < ApplicationController
-  # skip_before_action :authenticate_request
+  skip_before_action :authenticate_request
   before_action :set_api_v1_chat, only: [:show, :update, :destroy]
 
   # GET /api/v1/chats
   def index
-    @api_v1_chats = Api::V1::Chat.all
+    @api_v1_chats = Chat.all
 
     render json: @api_v1_chats
   end
