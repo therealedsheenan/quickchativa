@@ -1,5 +1,10 @@
 class Api::V1::ConversationsController < ApplicationController
-  skip_before_action :authenticate_request
+  # skip_before_action :authenticate_request
+
+  def index
+    @conversations = @current_user.conversations
+    render json: @conversations
+  end
 
   def create
     if Conversation.between(params[:sender_id],params[:recipient_id]).present?
